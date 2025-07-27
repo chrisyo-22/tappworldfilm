@@ -5,7 +5,7 @@ import {
   // Buttons & Actions
   Button,
   ButtonGroup,
-  
+
   // Layout & Structure
   Card,
   CardHeader,
@@ -13,24 +13,26 @@ import {
   CardFooter,
   Divider,
   Spacer,
-  
+
   // Navigation
   Navbar,
   Link,
-  Breadcrumbs,
-  BreadcrumbItem,
   Pagination,
-  
+
   // Inputs & Forms
   Input,
   Textarea,
-  
+
   // Data Display
   Table,
-  Avatar,
-  AvatarGroup,
+  TableHeader,
+  TableBody,
+  TableColumn,
+  TableRow,
+  TableCell,
+  getKeyValue,
 
-  
+
   // Feedback & Overlays
   Modal,
   ModalContent,
@@ -38,17 +40,17 @@ import {
   ModalBody,
   ModalFooter,
 
-  
+
   // Progress & Loading
   Spinner,
   CircularProgress,
   Progress,
   Skeleton,
-  
+
 
   // Providers & Utilities
   HeroUIProvider,
-  
+
 } from "@heroui/react";
 
 // // Re-export all components
@@ -56,7 +58,7 @@ export {
   // Buttons & Actions
   Button,
   ButtonGroup,
-  
+
   // Layout & Structure
   Card,
   CardHeader,
@@ -64,24 +66,25 @@ export {
   CardFooter,
   Divider,
   Spacer,
-  
+
   // Navigation
   Navbar,
   Link,
-  Breadcrumbs,
-  BreadcrumbItem,
   Pagination,
-  
+
   // Inputs & Forms
   Input,
   Textarea,
 
   // Data Display
   Table,
-  Avatar,
-  AvatarGroup,
+  TableHeader,
+  TableBody,
+  TableColumn,
+  TableRow,
+  TableCell,
+  getKeyValue,
 
-  
   // Feedback & Overlays
   Modal,
   ModalContent,
@@ -89,13 +92,13 @@ export {
   ModalBody,
   ModalFooter,
 
-  
+
   // Progress & Loading
   Spinner,
   CircularProgress,
   Progress,
   Skeleton,
-  
+
   // Providers & Utilities
   HeroUIProvider,
 
