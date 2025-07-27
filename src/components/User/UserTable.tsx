@@ -12,23 +12,24 @@ export default function UserTable({ Users }: { Users: UserInfo[] }) {
         return ({
             id: user.id,
             name: user.name,
-            username: user.username
+            email: user.email,
+            phone: user.phone
         })
 
     });
 
     const columns = [
         {
-            key: "id",
-            label: "ID",
-        },
-        {
             key: "name",
             label: "NAME",
         },
         {
-            key: "username",
-            label: "USERNAME",
+            key: "email",
+            label: "EMAIL",
+        },
+        {
+            key: "phone",
+            label: "PHONE",
         },
     ];
 
