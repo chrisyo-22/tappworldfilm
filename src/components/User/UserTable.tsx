@@ -1,10 +1,9 @@
 'use client'
 import "@/css/UserTable.css"
-import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue, Button } from "@/components/HeroUIComponents";
+import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue } from "@/components/ui/table";
 import UserInfo from "@/model/User";
 import { useRouter } from "next/navigation";
 import { Key } from "react";
-
 
 export default function UserTable({ Users }: { Users: UserInfo[] }) {
     const router = useRouter();
@@ -15,9 +14,7 @@ export default function UserTable({ Users }: { Users: UserInfo[] }) {
             email: user.email,
             phone: user.phone
         })
-
     });
-
     const columns = [
         {
             key: "name",
@@ -34,12 +31,27 @@ export default function UserTable({ Users }: { Users: UserInfo[] }) {
     ];
 
     const handleClick = (id: Key) => {
-        router.push(`/users/${id}`)
+        // Find the full user object from the Users array
+        const foundUser = Users.find(user => user.id === parseInt(id as string));
+        const numericId = parseInt(id as string);
+
+        console.log('Clicked ID:', numericId);
+        console.log('Found User:', foundUser);
+
+        if (numericId > 10 && foundUser) {
+            // Set state to trigger re-render with UserDetail
+            alert("Sorry feature is not ready");
+        }
+        else {
+            // Navigate to user detail page for existing users
+            router.push(`/users/${id}`);
+        }
     }
+
 
     return (
         <div className="table-container">
-            <Table 
+            <Table
                 aria-label="A list of User table"
                 selectionMode="single"
                 onRowAction={handleClick}
@@ -57,9 +69,6 @@ export default function UserTable({ Users }: { Users: UserInfo[] }) {
                     )}
                 </TableBody>
             </Table>
-            {/* To be added, need to modify How User Detail works */}
-            <Button className="add-button">Add User</Button>
         </div>
-
     );
 }

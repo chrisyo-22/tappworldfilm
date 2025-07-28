@@ -1,7 +1,7 @@
 'use client'
 
 import { startTransition, useEffect } from 'react'
-import { Button } from '../components/HeroUIComponents'
+import { Button } from '../components/ui/button'
 import { useRouter } from "next/navigation";
 export default function GlobalError({
   error,

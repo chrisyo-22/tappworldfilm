@@ -1,11 +1,11 @@
-// import { useEffect } from "react";
 import UserInfo from "../../model/User";
-import UserTable from "@/components/User/UserTable";
+import { fetchUsersAction } from "@/actions/users";
+import "@/css/UserPage.css"
+import UserListControl from "@/components/User/UserListControl";
 export default async function Page() {
-    await new Promise((resolve) => { setTimeout(resolve, 1000) });
-    const res = await fetch(`${process.env.USER_URL}`);
-    const data: UserInfo[] = await res.json();
+
+    const data: UserInfo[] = await fetchUsersAction();
     return (
-        <UserTable Users={data} />
-    )
+        <UserListControl Users={data} />
+    );
 }

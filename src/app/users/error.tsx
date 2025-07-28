@@ -2,7 +2,7 @@
 
 import React, { startTransition, useEffect } from 'react';
 import { useRouter } from "next/navigation";
-import { Button } from "@/components/HeroUIComponents";
+import { Button } from "@/components/ui/button";
 export default function error({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) {
     const router = useRouter();
     useEffect(() => {
